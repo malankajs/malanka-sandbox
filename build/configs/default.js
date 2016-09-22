@@ -23,7 +23,7 @@ module.exports = () => {
                 {
                     test: /\.js$/,
                     loader: 'babel?cacheDirectory',
-                    exclude: /es5/
+                    exclude: /es5|js-beautify|brace/
                 },
                 {
                     test: /\.hbs$/,
