@@ -9,4 +9,6 @@
 
 .root {
     composes: font_normal from '../Base/Base.css';
+
+    background: #2F3129;
 }

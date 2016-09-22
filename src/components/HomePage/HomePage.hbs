@@ -1,5 +1,12 @@
-<Section title="Welcome">
-    <div class="text">
-        Malanka ready for great advanture
+<div class="column column_left">
+    <Brace value=@sandbox.code lang="handlebars"></Brace>
+</div>
+<div class="column column_right">
+    <div class="cell">
+        <Brace value=sandbox.compiledCode lang="javascript" readonly=true></Brace>
     </div>
-</Section>
+    <div class="cell cell_result">
+        <Result sandbox=sandbox code=sandbox.compiledCode></Result>
+    </div>
+    {{!--<Code lang="js">{{@sandbox.compiledCode}}</Code>--}}
+</div>

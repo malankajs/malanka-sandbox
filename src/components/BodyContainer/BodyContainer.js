@@ -7,7 +7,7 @@ import styles from './BodyContainer.css';
 @Defaults({
     template,
     styles,
-    tagName: 'body'
+    tagName: 'div'
 })
 export class BodyContainer extends DiComponent {
 

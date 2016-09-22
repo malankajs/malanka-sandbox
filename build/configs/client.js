@@ -8,14 +8,14 @@ var clientConfig = Object.assign({}, config(), {
         ]
     },
     output: {
-        path: __dirname + '/../../dist/client/assets',
+        path: __dirname + '/../../dist/assets',
         filename: 'bundle.js',
-        publicPath: '/assets/'
+        publicPath: 'dist/assets/'
     }
 });
-
-if (clientConfig.debug) {
-    clientConfig.entry.index.push('webpack-dev-server/client?http://localhost:8080/');
-}
+//
+// if (clientConfig.debug) {
+//     clientConfig.entry.index.push('webpack-dev-server/client?http://localhost:8080/');
+// }
 
 module.exports = clientConfig;

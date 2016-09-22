@@ -1,0 +1,97 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto+Mono|Roboto&subset=latin,cyrillic);.Base__font_normal___zZSzf {
+    font-size: 14px;
+    line-height: 1.2;
+}
+
+.Base__font_header___31wuy {
+    font-size: 56px;
+}
+
+.Base__font_mono___3jnpN {
+    font-family: "Roboto Mono", monospace;
+}body, html {
+    font-family: "Roboto",sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #fefefe;
+}
+
+.BodyContainer__root___2K7TO {
+
+    background: #2F3129;
+}
+.Page__root___2VuHt {
+    padding: 0 30px;
+}.ErrorPage__root___2lZuV {
+}.Header__root___O9oW9 {
+    background: #2F3129;
+    overflow: hidden;
+}
+
+.Header__header___1qRCL {
+
+    font-size: 20px;
+    font-weight: 400;
+    color: white;
+    padding: 12px 12px 12px 24px;
+    margin: auto;
+    max-width: 760px;
+    float: left;
+}
+.Check__root___39lZA {
+    font-size: 16px;
+}
+.Navigation__root___2gcJx {
+    padding: 0 30px;
+    font-size: 0;
+    /*float: right;*/
+}
+
+.Navigation__link___Ntl35 {
+
+    display: inline-block;
+    text-decoration: none;
+    padding: 17px 22px;
+    color: #fff;
+    text-transform: uppercase;
+    border-bottom: 2px solid rgba(255,255,255,0);
+    transition: border-bottom-color .1s ease-out;
+}
+
+.Navigation__link_current___2P9bi {
+    border-bottom: 2px solid rgba(255,255,255,0.7);
+}
+
+.Navigation__check___3Xh6D {
+
+    line-height: 52px;
+    color: #eee;
+}
+.Brace__root___3vLP5 {
+    height: 100%;
+}
+.Result__root___RjIbQ {
+
+}
+.HomePage__root___1U3BG {
+    /*composes: root from "../Page/Page.css";*/
+    display: flex;
+    height: calc(100% - 52px);
+}
+
+.HomePage__column___2jqaG {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.HomePage__cell___3kHes {
+    height: 50%;
+}
+
+.HomePage__cell_result___mrKrO {
+    padding: 10px;
+    color: white;
+}
+
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzdHlsZXMuY3NzIiwic291cmNlUm9vdCI6IiJ9*/

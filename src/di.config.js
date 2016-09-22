@@ -6,9 +6,6 @@ export let diConfig = {
     resolvers: [
         webpackResolver([
             require.context('./models', true, /\.js$/),
-            require.context('./collections', true, /\.js$/),
-            require.context('./states', true, /\.js$/),
-            require.context('./lib', true, /\.js$/),
             require.context('./components', true, /(Header|Page)\.js$/)
         ]),
         staticResolver({
@@ -37,6 +34,7 @@ export let diConfig = {
         },
 
         homePage: ['HomePage', {
+            sandbox: 'sandbox'
         }],
 
         errorPage: ['ErrorPage', {
@@ -45,17 +43,20 @@ export let diConfig = {
         
         // Components
 
+        Header: {
+            sandbox: 'sandbox'
+        },
+
         // Data models & collections
+
+        sandbox: 'Sandbox',
 
         // States
 
         // Infrastructure
 
         env: ['Environment', {
-            renderer: 'renderer',
-            router: 'router'
-        }],
-
-        router: 'Router'
+            renderer: 'renderer'
+        }]
     }
 };

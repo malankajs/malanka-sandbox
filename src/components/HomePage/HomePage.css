@@ -1,11 +1,20 @@
 .root {
-    composes: root from "../Page/Page.css";
+    /*composes: root from "../Page/Page.css";*/
+    display: flex;
+    height: calc(100% - 52px);
 }
 
-.text {
-    composes: text from "../Section/Section.css";
+.column {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
 }
 
-.result {
-    padding: 20px 0;
+.cell {
+    height: 50%;
+}
+
+.cell_result {
+    padding: 10px;
+    color: white;
 }
