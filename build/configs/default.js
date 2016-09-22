@@ -14,7 +14,8 @@ module.exports = () => {
 
     var config = {
         info: true,
-        debug: DEBUG,
+        debug: true,
+        // debug: DEBUG,
         stats: {colors: true},
         styles: 'css?modules&importLoaders=1&localIdentName=' + className,
 
@@ -39,7 +40,7 @@ module.exports = () => {
                 }
             ]
         },
-        devtool: DEBUG ? 'inline-source-map' : false,
+        devtool: DEBUG ? '#inline-source-map' : 'source-map',
 
         plugins: [
             new ComponentsScanner({
@@ -65,7 +66,7 @@ module.exports = () => {
         config.plugins.push(new Webpack.optimize.UglifyJsPlugin({
             sourceMap: false,
             semicolons: false,
-            mangle: true,
+            mangle: false,
             compress: {
                 warnings: true
             }
