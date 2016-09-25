@@ -1,4 +1,4 @@
-import {staticResolver, then, createContainer, createMethodFactory, createInstanceFactory} from 'di.js/build/di.es5';
+import {staticResolver, then, createContainer} from 'di.js';
 
 import {DomRenderer} from 'malanka/es5/Renderer/DomRenderer';
 import {FetchRequest} from 'malanka/es5/Request/FetchRequest';

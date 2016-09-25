@@ -8,16 +8,17 @@ var DEBUG = process.env.NODE_ENV !== 'production';
 var className = DEBUG ? '[name]__[local]___[hash:base64:5]' : '[hash:base64:4]&minimize';
 
 module.exports = () => {
-    var extractTextWebpackPlugin = new ExtractTextWebpackPlugin('styles.css', {
+    var extractTextWebpackPlugin = new ExtractTextWebpackPlugin({
+        filename: 'styles.css',
         allChunks: true
     });
 
-    var config = {
-        info: true,
-        debug: true,
-        // debug: DEBUG,
-        stats: {colors: true},
+    var options = {
         styles: 'css?modules&importLoaders=1&localIdentName=' + className,
+    };
+
+    var config = {
+        stats: {colors: true},
 
         module: {
             loaders: [
@@ -32,7 +33,9 @@ module.exports = () => {
                 },
                 {
                     test: /\.css$/,
-                    loader: extractTextWebpackPlugin.extract('css?modules&importLoaders=1&localIdentName=' + className)
+                    loader: extractTextWebpackPlugin.extract({
+                        loader: 'css?modules&importLoaders=1&localIdentName=' + className
+                    })
                 },
                 {
                     test: /\.(svg|png)/,
@@ -62,7 +65,7 @@ module.exports = () => {
     };
 
     if (!DEBUG) {
-        config.plugins.push(new Webpack.optimize.OccurenceOrderPlugin());
+        // config.plugins.push(new Webpack.optimize.OccurenceOrderPlugin());
         config.plugins.push(new Webpack.optimize.UglifyJsPlugin({
             sourceMap: false,
             semicolons: false,
@@ -74,5 +77,5 @@ module.exports = () => {
         config.plugins.push(new Webpack.optimize.DedupePlugin());
     }
     
-    return config;
+    return {config, options};
 };

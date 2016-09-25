@@ -1,4 +1,4 @@
-import {webpackResolver, staticResolver} from 'di.js/build/di.es5';
+import {webpackResolver, staticResolver} from 'di.js';
 import {BodyContainer} from './components/BodyContainer/BodyContainer';
 import {Environment, Model, Collection} from 'malanka';
 

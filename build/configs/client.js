@@ -1,7 +1,7 @@
 var webpack = require('webpack');
 var config = require('./default');
 
-var clientConfig = Object.assign({}, config(), {
+var clientConfig = Object.assign({}, config().config, {
     entry: {
         index: [
             __dirname + '/../../src/index.js'
